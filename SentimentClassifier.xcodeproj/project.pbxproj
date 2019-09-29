@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E143EEBD234067F5003A9903 /* SentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E143EEBC234067F5003A9903 /* SentimentClassifier.mlmodel */; };
 		E156370023404AB500AF87AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15636FF23404AB500AF87AA /* AppDelegate.swift */; };
 		E156370223404AB500AF87AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156370123404AB500AF87AA /* SceneDelegate.swift */; };
 		E156370423404AB500AF87AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156370323404AB500AF87AA /* ViewController.swift */; };
 		E156370723404AB500AF87AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E156370523404AB500AF87AA /* Main.storyboard */; };
 		E156370923404AB800AF87AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E156370823404AB800AF87AA /* Assets.xcassets */; };
 		E156370C23404AB800AF87AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E156370A23404AB800AF87AA /* LaunchScreen.storyboard */; };
+		E156371C23404FDF00AF87AA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156371B23404FDF00AF87AA /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E143EEBC234067F5003A9903 /* SentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		E15636FC23404AB500AF87AA /* SentimentClassifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentimentClassifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15636FF23404AB500AF87AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E156370123404AB500AF87AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		E156370823404AB800AF87AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E156370B23404AB800AF87AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E156370D23404AB800AF87AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E156371B23404FDF00AF87AA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		E15636FE23404AB500AF87AA /* SentimentClassifier */ = {
 			isa = PBXGroup;
 			children = (
-				E15636FF23404AB500AF87AA /* AppDelegate.swift */,
-				E156370123404AB500AF87AA /* SceneDelegate.swift */,
-				E156370323404AB500AF87AA /* ViewController.swift */,
-				E156370523404AB500AF87AA /* Main.storyboard */,
+				E143EEBC234067F5003A9903 /* SentimentClassifier.mlmodel */,
+				E156371A23404FBF00AF87AA /* Extension */,
+				E156371523404BAF00AF87AA /* Model */,
+				E156371323404B5100AF87AA /* Controller */,
+				E156371423404B9A00AF87AA /* View */,
 				E156370823404AB800AF87AA /* Assets.xcassets */,
-				E156370A23404AB800AF87AA /* LaunchScreen.storyboard */,
 				E156370D23404AB800AF87AA /* Info.plist */,
+				E156371623404BBF00AF87AA /* Supporting Files */,
 			);
 			path = SentimentClassifier;
+			sourceTree = "<group>";
+		};
+		E156371323404B5100AF87AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E156370123404AB500AF87AA /* SceneDelegate.swift */,
+				E15636FF23404AB500AF87AA /* AppDelegate.swift */,
+				E156370323404AB500AF87AA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E156371423404B9A00AF87AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E156370523404AB500AF87AA /* Main.storyboard */,
+				E156370A23404AB800AF87AA /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E156371523404BAF00AF87AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E156371623404BBF00AF87AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E156371A23404FBF00AF87AA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E156371B23404FDF00AF87AA /* StringExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +186,9 @@
 			files = (
 				E156370423404AB500AF87AA /* ViewController.swift in Sources */,
 				E156370023404AB500AF87AA /* AppDelegate.swift in Sources */,
+				E156371C23404FDF00AF87AA /* StringExtension.swift in Sources */,
 				E156370223404AB500AF87AA /* SceneDelegate.swift in Sources */,
+				E143EEBD234067F5003A9903 /* SentimentClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
